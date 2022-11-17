@@ -12,7 +12,7 @@ public class SaveItemApi
 {
     [FunctionName("items")]
     public async Task Run(
-        [HttpTrigger(AuthorizationLevel.Anonymous, "post")] HttpRequest req,
+        [HttpTrigger(AuthorizationLevel.Function, "post")] HttpRequest req,
         [ServiceBus("events.todo.newitem", Connection = "ServiceBusConnectionString")] IAsyncCollector<NewItemEvent> messages,
         ILogger log)
     {

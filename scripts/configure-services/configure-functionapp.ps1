@@ -15,7 +15,7 @@ az functionapp update `
   --set siteConfig.cors.supportCredentials=true
 
 $webAppHost=$(az webapp show -g $rg -n $webAppName --query defaultHostName -o tsv)
-$webAppUrl="https://$webAppHost/api"
+$webAppUrl="https://$webAppHost"
 
 az functionapp cors add `
   -g $rg -n $functionAppName `

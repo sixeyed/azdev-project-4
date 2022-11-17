@@ -17,7 +17,7 @@ echo "Configuring function app deployment from: $projectGitBranch branch; $webAp
 
 az functionapp config appsettings set `
   -g $rg -n $functionAppName `
-  --settings PROJECT='functions/TodoList.Functions/ToDoList.csproj' DEPLOYMENT_BRANCH=$projectGitBranch
+  --settings PROJECT='functions/TodoList.Functions/TodoList_Functions.csproj' DEPLOYMENT_BRANCH=$projectGitBranch
 
 az functionapp deployment source config `
   -g $rg -n $functionAppName `

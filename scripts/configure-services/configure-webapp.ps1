@@ -9,4 +9,4 @@ $functionsConnectionString="https://$functionAppHost/api"
 
 az webapp config appsettings set `
   -g $rg -n $webAppName `
-  --settings "ConnectionStrings:Functions=$functionsConnectionString" "ConnectionStrings:ServiceBus=$serviceBusConnectionString" "ConnectionStrings:ToDoDb=$connectionString"
+  --settings ConnectionStrings__Functions="$functionsConnectionString" ConnectionStrings__ServiceBus="$serviceBusConnectionString" ConnectionStrings__ToDoDb="$connectionString"
