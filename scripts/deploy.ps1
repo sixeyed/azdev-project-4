@@ -11,8 +11,9 @@
 ./create-services/create-sql.ps1
 ./create-services/create-signalr.ps1
 ./create-services/create-webapp.ps1
-./create-services/create-functions.ps1
+./create-services/create-functionapp.ps1
 
 # configuration
 ./configure-services/configure-functionapp.ps1
+./configure-services/configure-webapp.ps1
 ./configure-services/configure-sql.ps1
